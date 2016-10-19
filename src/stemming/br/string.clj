@@ -37,10 +37,7 @@
   "casal formado por avô e avó"
   [word]
   (if (re-find #"av(ô|ó)s$" word)
-    (subs word 0 (->> word count dec))
-
-    ))
-
+    (subs word 0 (->> word count dec))))
 
 
 (defn singularize
@@ -48,10 +45,12 @@
   [word]
   (let [re-word (string/lower-case word)]
     (or
-      (terminated-es word)
-      (terminated-is word)
-      (terminated-ns word)
-      (terminated-aos word)
-      (terminated-vowel word)
-      (grandmathers word) )))
+      (terminated-es re-word)
+      (terminated-is re-word)
+      (terminated-ns re-word)
+      (terminated-aos re-word)
+      (terminated-vowel re-word)
+      (grandmathers re-word))
+  )
+)
 

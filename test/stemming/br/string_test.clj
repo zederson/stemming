@@ -3,6 +3,7 @@
             [stemming.br.string :refer :all]))
 
 ; http://portugues1.blogspot.com.br/2009/10/formacao-do-plural-regras-basicas.html
+; https://03021846268424808119.googlegroups.com/attach/5a956b0c29e9a766/steprules.txt?part=0.2&view=1&vt=ANaJVrGl0XPNBlhygp3WEXMrAFfeEhccPxyq9bNe19KsSMmXk4mm_pVbpoAyFMyogcPgicCnsgFSrd5N8gLatjwo2H5Y-V3mYx4v9eyQtXxZaNbYDprBO0c
 ; resolver o problema do UTEIS
 ; lápis
 ; atlas
@@ -12,23 +13,23 @@
 
 
 (deftest a-singularize
-  ;(testing
-  ;  "substantivos simples"
-  ;  (is (= "casa" (singularize "casas")))
-  ;  (is (= "peru" (singularize "perus")))
-  ;  (is (= "pai" (singularize "pais")))
-  ;  (is (= "lei" (singularize "leis")))
-  ;  (is (= "herói" (singularize "heróis")))
-  ;  (is (= "réu" (singularize "réus")))
-  ;  (is (= "troféu" (singularize "troféus")))
-  ;  (is (= "fogaréu" (singularize "fogaréus")))
-  ;  (is (= "degrau" (singularize "degraus")))
-  ;  (is (= "grau" (singularize "graus")))
-  ;  (is (= "sarau" (singularize "saraus")))
-  ;  (is (= "bacalhau" (singularize "bacalhaus")))
-  ;  (is (= "maçã" (singularize "maçãs")))
-  ;  (is (= "mãe" (singularize "mães")))
-  ;)
+  (testing
+    "substantivos simples"
+    (is (= "casa" (singularize "casas")))
+    (is (= "peru" (singularize "perus")))
+    (is (= "pai" (singularize "pais")))
+    (is (= "lei" (singularize "leis")))
+    (is (= "herói" (singularize "heróis")))
+    (is (= "réu" (singularize "réus")))
+    (is (= "troféu" (singularize "troféus")))
+    (is (= "fogaréu" (singularize "fogaréus")))
+    (is (= "degrau" (singularize "degraus")))
+    (is (= "grau" (singularize "graus")))
+    (is (= "sarau" (singularize "saraus")))
+    (is (= "bacalhau" (singularize "bacalhaus")))
+    (is (= "maçã" (singularize "maçãs")))
+    (is (= "mãe" (singularize "mães")))
+  )
 
   (testing
     "A maioria dos substantivos terminados em -ão forma o plural substituindo essa terminação por -ões"
@@ -115,13 +116,40 @@
     (is (= "fuzil" (singularize "fuzis")))
   )
 
+  ;(testing
+  ;  "Os substantivos terminados em -n formam o plural pelo acréscimo de -s ou -es"
+  ;  (is (= "abdomen" (singularize "abdomens")))
+  ;  (is (= "germen" (singularize "germens")))
+  ;  (is (= "hifen" (singularize "hifens")))
+  ;  (is (= "liquen" (singularize "liquens")))
+  ;)
+
+
   (testing
-    "Os substantivos terminados em -n formam o plural pelo acréscimo de -s ou -es"
-    (is (= "abdomen" (singularize "abdomens")))
-    (is (= "germen" (singularize "germens")))
-    (is (= "hifen" (singularize "hifens")))
-    (is (= "liquen" (singularize "liquens")))
-  )
+    "Nesses casos, ocorre um fenômeno chamado metafonia, ou seja, a mudança de som entre uma forma e outra"
+    (is (= "aposto" (singularize "apostos")))
+    (is (= "caroço" (singularize "caroços")))
+    (is (= "corno" (singularize "cornos")))
+    (is (= "corpo" (singularize "corpos")))
+    (is (= "corvo" (singularize "corvos")))
+    (is (= "esforço" (singularize "esforços")))
+    (is (= "fogo" (singularize "fogos")))
+    (is (= "imposto" (singularize "impostos")))
+    (is (= "miolo" (singularize "miolos")))
+    (is (= "osso" (singularize "ossos")))
+    (is (= "poço" (singularize "poços")))
+    (is (= "porto" (singularize "portos")))
+    (is (= "povo" (singularize "povos")))
+    (is (= "socorro" (singularize "socorros")))
+    (is (= "forno" (singularize "fornos")))
+    (is (= "jogo" (singularize "jogos")))
+    (is (= "olho" (singularize "olhos")))
+    (is (= "ovo" (singularize "ovos")))
+    (is (= "porco" (singularize "porcos")))
+    (is (= "posto" (singularize "postos")))
+    (is (= "reforço" (singularize "reforços")))
+    (is (= "tijolo" (singularize "tijolos"))))
+
 
 
 

@@ -5,6 +5,11 @@
   [word expression replacement]
   (if (= word expression) replacement))
 
+(defn non-pluralize
+  [word sentence]
+  (if (some #(= % word) sentence)
+    word))
+
 (defn terminated-ns
   [word]
   (if (re-find #"ns$" word)
@@ -26,32 +31,31 @@
   [word]
   (if (re-find #"ais$" word)
     (or
-      (exception word "cais" "cais")
-      (exception word "mais" "mais")
+      (non-pluralize word ["cais" "mais"])
+      (exception word "pais" "pai")
       (string/replace word #"ais$" "al") )))
 
 (defn terminated-eis
   [word]
   (if (re-find #"[eé]is$" word)
-    (string/replace word #"[eé]is$" "el")))
+    (let [size (count (string/replace word #"[eé]is$" ""))]
+      (if (> size 2)
+          (string/replace word #"[eé]is$" "el")))))
+
 
 (defn terminated-ois
   [word]
   (if (re-find #"óis$" word)
-    (string/replace word #"óis$" "ol")))
+    (or
+      (exception word "heróis" "herói")
+      (string/replace word #"óis$" "ol"))))
 
 (defn terminated-is
   [word]
   (if (re-find #"is$" word)
     (or
-      (exception word "cais" "cais")
-      (exception word "lápis" "lápis")
-      (exception word "mais" "mais")
-      (exception word "crúcis" "crúcis")
+      (non-pluralize word ["cais" "lápis" "mais" "crúcis" "pois" "depois" "dois"])
       (exception word "biquínis" "biquíni")
-      (exception word "pois" "pois")
-      (exception word "depois" "depois")
-      (exception word "dois" "dois")
       (exception word "leis" "lei")
       (if (re-find #"[aeou]{1}is$" word)
         (string/replace word #"is$" "l")
@@ -76,28 +80,8 @@
   [word]
   (if (re-find #"s$" word)
     (or
-      (exception word "cais" "cais")
-      (exception word "aliás" "aliás")
-      (exception word "pires" "pires")
-      (exception word "lápis" "lápis")
-      (exception word "mais" "mais")
-      (exception word "mas" "mas")
-      (exception word "menos" "menos")
-      (exception word "férias" "férias")
-      (exception word "fezes" "fezes")
-      (exception word "pêsames" "pêsames")
-      (exception word "crúcis" "crúcis")
-      (exception word "gás" "gás")
-      (exception word "atrás" "atrás")
-      (exception word "moisés" "moisés")
-      (exception word "através" "através")
-      (exception word "convés" "convés")
-      (exception word "ês" "ês")
-      (exception word "país" "país")
-      (exception word "após" "após")
-      (exception word "ambas" "ambas")
-      (exception word "ambos" "ambos")
-      (exception word "messias" "messias")
+      (non-pluralize
+        word ["cais" "aliás" "pires" "lápis" "mais" "mas" "menos" "férias" "fezes" "pêsames" "crúcis" "gás" "atrás" "moisés" "através" "convés" "ês" "país" "após" "ambas" "ambos" "messias"])
       (subs word 0 (->> word count dec))
  )))
 

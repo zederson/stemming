@@ -3,7 +3,6 @@
             [stemming.br.string :refer :all]))
 
 ; http://portugues1.blogspot.com.br/2009/10/formacao-do-plural-regras-basicas.html
-; https://03021846268424808119.googlegroups.com/attach/5a956b0c29e9a766/steprules.txt?part=0.2&view=1&vt=ANaJVrGl0XPNBlhygp3WEXMrAFfeEhccPxyq9bNe19KsSMmXk4mm_pVbpoAyFMyogcPgicCnsgFSrd5N8gLatjwo2H5Y-V3mYx4v9eyQtXxZaNbYDprBO0c
 
 (deftest a-singularize
   (testing
@@ -143,3 +142,34 @@
     (is (= "tijolo" (singularize "tijolos")))
   )
 )
+
+
+;   {"ns",1,"m"},
+;   {"ões",3,"ão"},
+;   {"ães",1,"ão",{"mãe"}},
+;   {"ais",1,"al",{"cais","mais"}},
+;   {"éis",2,"el"},
+;   {"eis",2,"el"},
+;   {"óis",2,"ol"},
+;   {"is",2,"il",{"lápis","cais","mais","crúcis","biquínis","pois","depois","dois","leis"}},
+;   {"les",3,"l"},
+;   {"res",3,"r"},
+;   {"s",2,"",{"aliás","pires","lápis","cais","mais","mas","menos",
+;              "férias","fezes","pêsames","crúcis","gás",
+;              "atrás","moisés","através","convés","ês",
+;              "país","após","ambas","ambos","messias"}}};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

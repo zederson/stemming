@@ -1,0 +1,742 @@
+{
+  "rules": {
+    "step": [
+      {
+        "name": "pluralreduction",
+        "size": "3",
+        "exceptions": "1",
+        "rule": [
+          { "replacement": "ão", "size": "3", "suffix": "ões" },
+          { "replacement": "ão", "size": "1", "suffix": "ães", "exception": "mãe" },
+          { "replacement": "al", "size": "1", "suffix": "ais", "exception": [ "cais", "mais" ] },
+          { "replacement": "el", "size": "2", "suffix": "éis" },
+          { "replacement": "el", "size": "2", "suffix": "eis" },
+          { "replacement": "ol", "size": "2", "suffix": "óis" },
+          { "replacement": "l", "size": "3", "suffix": "les" },
+          { "replacement": "r", "size": "3", "suffix": "res" },
+          { "replacement": "il", "size": "2", "suffix": "is", "exception": [ "lápis", "cais", "mais", "crúcis", "biquínis", "pois", "depois", "dois", "leis" ] },
+          { "replacement": "m", "size": "1", "suffix": "ns" },
+          { "replacement": "", "size": "2", "suffix": "s", "exception": [ "aliás", "pires", "lápis", "cais", "mais", "mas", "menos", "férias", "fezes", "pêsames", "crúcis", "gás", "atrás", "moisés", "através", "convés", "ês", "país", "após", "ambas", "ambos", "messias" ] }
+        ]
+      },
+      {
+        "name": "femininereduction",
+        "size": "3",
+        "exceptions": "1",
+        "rule": [
+          { "replacement": "eiro", "size": "3", "suffix": "eira", "exception": [ "beira", "cadeira", "frigideira", "bandeira", "feira", "capoeira", "barreira", "fronteira", "besteira", "poeira" ] },
+          { "replacement": "íaco", "size": "3", "suffix": "íaca" },
+          { "replacement": "inho", "size": "3", "suffix": "inha", "exception": [ "rainha", "linha", "minha" ] },
+          { "replacement": "oso", "size": "3", "suffix": "osa", "exception": [ "mucosa", "prosa" ] },
+          { "replacement": "ico", "size": "3", "suffix": "ica", "exception": "dica" },
+          { "replacement": "ado", "size": "2", "suffix": "ada", "exception": "pitada" },
+          { "replacement": "ido", "size": "3", "suffix": "ida", "exception": "vida" },
+          { "replacement": "ido", "size": "3", "suffix": "ída", "exception": [ "recaída", "saída", "dúvida" ] },
+          { "replacement": "imo", "size": "3", "suffix": "ima", "exception": "vítima" },
+          { "replacement": "ivo", "size": "3", "suffix": "iva", "exception": [ "saliva", "oliva" ] },
+          { "replacement": "ão", "size": "3", "suffix": "ona", "exception": [ "abandona", "lona", "iona", "cortisona", "monótona", "maratona", "acetona", "detona", "carona" ] },
+          { "replacement": "or", "size": "3", "suffix": "ora" },
+          { "replacement": "ês", "size": "3", "suffix": "esa", "exception": [ "mesa", "obesa", "princesa", "turquesa", "ilesa", "pesa", "presa" ] },
+          { "replacement": "no", "size": "4", "suffix": "na", "exception": [ "carona", "abandona", "lona", "iona", "cortisona", "monótona", "maratona", "acetona", "detona", "guiana", "campana", "grana", "caravana", "banana", "paisana" ] },
+          { "replacement": "ão", "size": "2", "suffix": "ã", "exception": [ "amanhã", "arapuã", "fã", "divã" ] }
+        ]
+      },
+      {
+        "name": "adverbreduction",
+        "size": "0",
+        "exceptions": "0",
+        "rule": [ { "size": "4", "suffix": "mente", "exception": "experimente" }]
+      },
+      {
+        "name": "augmentativediminutivereduction",
+        "size": "0",
+        "exceptions": "1",
+        "rule": [
+          { "size": "5", "suffix": "abílíssimo" },
+          { "size": "5", "suffix": "díssimo" },
+          { "replacement": "c", "size": "4", "suffix": "quinho" },
+          { "size": "3", "suffix": "íssimo" },
+          { "size": "4", "suffix": "érrimo" },
+          { "size": "3", "suffix": "adinho" },
+          { "size": "3", "suffix": "zarrão" },
+          { "size": "2", "suffix": "zinho" },
+          { "size": "3", "suffix": "ésimo" },
+          { "size": "4", "suffix": "uinho" },
+          { "size": "4", "suffix": "alhão" },
+          { "size": "4", "suffix": "arraz" },
+          { "size": "4", "suffix": "arrão" },
+          { "size": "3", "suffix": "inho", "exception": [ "caminho", "cominho" ] },
+          { "size": "4", "suffix": "idão" },
+          { "size": "4", "suffix": "adão" },
+          { "size": "3", "suffix": "ázio", "exception": "topázio" },
+          { "size": "3", "suffix": "arra" },
+          { "size": "4", "suffix": "uça" },
+          { "size": "4", "suffix": "aço", "exception": "antebraço" },
+          { "size": "4", "suffix": "aça" },
+          { "size": "2", "suffix": "zão", "exception": "coalizão" },
+          { "size": "3", "suffix": "ão", "exception": [ "camarão", "chimarrão", "canção", "coração", "embrião", "grotão", "glutão", "ficção", "fogão", "feição", "furacão", "gamão", "lampião", "leão", "macacão", "nação", "órfão", "orgão", "patrão", "portão", "quinhão", "rincão", "tração", "falcão", "espião", "mamão", "folião", "cordão", "aptidão", "campeão", "colchão", "limão", "leilão", "melão", "barão", "milhão", "bilhão", "fusão", "cristão", "ilusão", "capitão", "estação", "senão" ] }
+        ]
+      },
+      {
+        "name": "nounreduction",
+        "size": "0",
+        "exceptions": "0",
+        "rule": [
+          { "size": "4", "suffix": "encialista" },
+          { "size": "5", "suffix": "abilidade" },
+          { "size": "4", "suffix": "icionista" },
+          { "size": "5", "suffix": "cionista" },
+          { "size": "3", "suffix": "alístico" },
+          { "size": "5", "suffix": "ionista" },
+          { "size": "5", "suffix": "ividade" },
+          { "size": "4", "suffix": "iamento" },
+          { "size": "4", "suffix": "alizado" },
+          { "size": "4", "suffix": "atizado" },
+          { "size": "4", "suffix": "ivismo" },
+          { "size": "4", "suffix": "alismo" },
+          { "size": "4", "suffix": "ástico", "exception": "eclesiástico" },
+          { "size": "5", "suffix": "encial" },
+          { "size": "5", "suffix": "atória" },
+          { "size": "5", "suffix": "atoria" },
+          { "size": "5", "suffix": "alista" },
+          { "size": "3", "suffix": "amento", "exception": [ "firmamento", "fundamento", "departamento" ] },
+          { "size": "3", "suffix": "imento" },
+          { "size": "4", "suffix": "áutico" },
+          { "size": "4", "suffix": "êutico" },
+          { "size": "3", "suffix": "edouro" },
+          { "size": "3", "suffix": "queiro" },
+          { "size": "5", "suffix": "alizaç" },
+          { "size": "5", "suffix": "atizaç" },
+          { "size": "4", "suffix": "tizado", "exception": "alfabetizado" },
+          { "size": "4", "suffix": "adeiro", "exception": "desfiladeiro" },
+          { "replacement": "c", "size": "4", "suffix": "quice" },
+          { "size": "3", "suffix": "ático" },
+          { "size": "5", "suffix": "ionar" },
+          { "size": "5", "suffix": "tizaç" },
+          { "size": "5", "suffix": "idade", "exception": [ "autoridade", "comunidade" ] },
+          { "size": "6", "suffix": "mento", "exception": [ "firmamento", "elemento", "complemento", "instrumento", "departamento" ] },
+          {
+            "size": "4",
+            "suffix": "izado",
+            "exception": [
+              "organizado",
+              "pulverizado"
+            ]
+          },
+          {
+            "size": "4",
+            "suffix": "ativo",
+            "exception": [
+              "pejorativo",
+              "relativo"
+            ]
+          },
+          {
+            "size": "4",
+            "suffix": "ional"
+          },
+          {
+            "size": "3",
+            "suffix": "ência"
+          },
+          {
+            "size": "4",
+            "suffix": "ância",
+            "exception": "ambulância"
+          },
+          {
+            "size": "5",
+            "suffix": "izaç",
+            "exception": "organizaç"
+          },
+          {
+            "size": "3",
+            "suffix": "ário",
+            "exception": [
+              "voluntário",
+              "salário",
+              "aniversário",
+              "diário",
+              "lionário",
+              "armário"
+            ]
+          },
+          {
+            "size": "6",
+            "suffix": "ério"
+          },
+          {
+            "size": "5",
+            "suffix": "auta"
+          },
+          {
+            "size": "6",
+            "suffix": "énse"
+          },
+          {
+            "size": "4",
+            "suffix": "esco"
+          },
+          {
+            "size": "2",
+            "suffix": "ante",
+            "exception": [
+              "gigante",
+              "elefante",
+              "adiante",
+              "possante",
+              "instante",
+              "restaurante"
+            ]
+          },
+          {
+            "size": "4",
+            "suffix": "oria",
+            "exception": "categoria"
+          },
+          {
+            "size": "4",
+            "suffix": "ista"
+          },
+          {
+            "size": "3",
+            "suffix": "íaco"
+          },
+          {
+            "size": "2",
+            "suffix": "ável",
+            "exception": [
+              "afável",
+              "razoável",
+              "potável",
+              "vulnerável"
+            ]
+          },
+          {
+            "size": "5",
+            "suffix": "ível",
+            "exception": "possível"
+          },
+          {
+            "size": "4",
+            "suffix": "ente",
+            "exception": [
+              "freqüente",
+              "alimente",
+              "acrescente",
+              "permanente",
+              "oriente",
+              "aparente"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "inal"
+          },
+          {
+            "size": "4",
+            "suffix": "tivo",
+            "exception": "relativo"
+          },
+          {
+            "size": "3",
+            "suffix": "tico",
+            "exception": [
+              "político",
+              "eclesiástico",
+              "diagnostico",
+              "prático",
+              "doméstico",
+              "diagnóstico",
+              "idêntico",
+              "alopático",
+              "artístico",
+              "autêntico",
+              "eclético",
+              "crítico",
+              "critico"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "agem",
+            "exception": [
+              "coragem",
+              "chantagem",
+              "vantagem",
+              "carruagem"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "ador"
+          },
+          {
+            "size": "3",
+            "suffix": "edor"
+          },
+          {
+            "size": "4",
+            "suffix": "ural"
+          },
+          {
+            "size": "4",
+            "suffix": "idor",
+            "exception": "ouvidor"
+          },
+          {
+            "size": "3",
+            "suffix": "eiro",
+            "exception": [
+              "desfiladeiro",
+              "pioneiro",
+              "mosteiro"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "ismo",
+            "exception": "cinismo"
+          },
+          {
+            "size": "3",
+            "suffix": "eza"
+          },
+          {
+            "size": "4",
+            "suffix": "ico",
+            "exception": [
+              "tico",
+              "público",
+              "explico"
+            ]
+          },
+          {
+            "size": "4",
+            "suffix": "dor",
+            "exception": "ouvidor"
+          },
+          {
+            "size": "4",
+            "suffix": "sor",
+            "exception": "assessor"
+          },
+          {
+            "size": "3",
+            "suffix": "tor",
+            "exception": [
+              "benfeitor",
+              "leitor",
+              "editor",
+              "pastor",
+              "produtor",
+              "promotor",
+              "consultor"
+            ]
+          },
+          {
+            "size": "4",
+            "suffix": "ice",
+            "exception": "cúmplice"
+          },
+          {
+            "size": "4",
+            "suffix": "ano"
+          },
+          {
+            "size": "4",
+            "suffix": "ura",
+            "exception": [
+              "imatura",
+              "acupuntura",
+              "costura"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "ual",
+            "exception": [
+              "bissexual",
+              "virtual",
+              "visual",
+              "pontual"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "ial"
+          },
+          { "replacement": "vel", "size": "6", "suffix": "bil" },
+          { "size": "5", "suffix": "rio", "exception": [ "voluntário", "salário", "aniversário", "diário", "compulsório", "lionário", "próprio", "stério", "armário" ] },
+          { "size": "4", "suffix": "ivo", "exception": [ "passivo", "possessivo", "pejorativo", "positivo" ] },
+          { "size": "2", "suffix": "ado", "exception": "grado" },
+          { "size": "3", "suffix": "ido", "exception": [ "cândido", "consolido", "rápido", "decido", "tímido", "duvido", "marido" ] },
+          {
+            "size": "3",
+            "suffix": "oso",
+            "exception": "precioso"
+          },
+          {
+            "size": "5",
+            "suffix": "vel",
+            "exception": [
+              "possível",
+              "vulnerável",
+              "solúvel"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "aç",
+            "exception": [
+              "equaç",
+              "relaç"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "iç",
+            "exception": "eleição"
+          },
+          {
+            "size": "4",
+            "suffix": "ês"
+          },
+          {
+            "size": "4",
+            "suffix": "ez"
+          },
+          {
+            "size": "4",
+            "suffix": "al",
+            "exception": [
+              "afinal",
+              "animal",
+              "estatal",
+              "bissexual",
+              "desleal",
+              "fiscal",
+              "formal",
+              "pessoal",
+              "liberal",
+              "postal",
+              "virtual",
+              "visual",
+              "pontual",
+              "sideral",
+              "sucursal"
+            ]
+          },
+          {
+            "size": "2",
+            "suffix": "or",
+            "exception": [
+              "motor",
+              "melhor",
+              "redor",
+              "rigor",
+              "sensor",
+              "tambor",
+              "tumor",
+              "assessor",
+              "benfeitor",
+              "pastor",
+              "terior",
+              "favor",
+              "autor"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "verbreduction",
+        "size": "0",
+        "exceptions": "0",
+        "rule": [
+          { "size": "2", "suffix": "aríamo" },
+          { "size": "2", "suffix": "ássemo" },
+          { "size": "2", "suffix": "eríamo" },
+          { "size": "3", "suffix": "iríamo" },
+          { "size": "3", "suffix": "íssemo" },
+          { "size": "3", "suffix": "êssemo" },
+          { "size": "2", "suffix": "áramo" },
+          { "size": "2", "suffix": "aremo" },
+          { "size": "2", "suffix": "ariam" },
+          { "size": "3", "suffix": "aríei" },
+          { "size": "3", "suffix": "ássei" },
+          { "size": "3", "suffix": "assem" },
+          { "size": "2", "suffix": "ávamo" },
+          { "size": "3", "suffix": "êramo" },
+          { "size": "3", "suffix": "eremo" },
+          { "size": "3", "suffix": "eriam" },
+          { "size": "3", "suffix": "eríei" },
+          { "size": "3", "suffix": "êssei" },
+          { "size": "3", "suffix": "essem" },
+          { "size": "3", "suffix": "íramo" },
+          { "size": "3", "suffix": "iremo" },
+          { "size": "3", "suffix": "iriam" },
+          { "size": "3", "suffix": "iríei" },
+          { "size": "3", "suffix": "íssei" },
+          { "size": "3", "suffix": "issem" },
+          { "size": "4", "suffix": "tizar", "exception": "alfabetizar" },
+          { "size": "2", "suffix": "ando" },
+          { "size": "3", "suffix": "endo" },
+          { "size": "3", "suffix": "indo" },
+          { "size": "3", "suffix": "ondo" },
+          { "size": "2", "suffix": "aram" },
+          { "size": "2", "suffix": "arde" },
+          { "size": "2", "suffix": "árei" },
+          { "size": "2", "suffix": "arei" },
+          { "size": "2", "suffix": "arão" },
+          { "size": "2", "suffix": "erão" },
+          { "size": "2", "suffix": "irão" },
+          { "size": "3", "suffix": "iona" },
+          { "size": "2", "suffix": "arem" },
+          { "size": "2", "suffix": "aria" },
+          { "size": "2", "suffix": "armo" },
+          { "size": "2", "suffix": "asse" },
+          { "size": "2", "suffix": "aste" },
+          { "size": "2", "suffix": "avam", "exception": "agravam" },
+          { "size": "2", "suffix": "ávei" },
+          { "size": "3", "suffix": "eram" },
+          { "size": "3", "suffix": "erde" },
+          {
+            "size": "3",
+            "suffix": "erei"
+          },
+          {
+            "size": "3",
+            "suffix": "êrei"
+          },
+          {
+            "size": "3",
+            "suffix": "erem"
+          },
+          {
+            "size": "3",
+            "suffix": "eria"
+          },
+          {
+            "size": "3",
+            "suffix": "ermo"
+          },
+          {
+            "size": "3",
+            "suffix": "esse"
+          },
+          {
+            "size": "3",
+            "suffix": "este",
+            "exception": [
+              "faroeste",
+              "agreste"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "íamo"
+          },
+          {
+            "size": "3",
+            "suffix": "iram"
+          },
+          {
+            "size": "3",
+            "suffix": "íram"
+          },
+          {
+            "size": "2",
+            "suffix": "irde"
+          },
+          {
+            "size": "3",
+            "suffix": "irei",
+            "exception": "admirei"
+          },
+          {
+            "size": "3",
+            "suffix": "irem",
+            "exception": "adquirem"
+          },
+          {
+            "size": "4",
+            "suffix": "iava",
+            "exception": "ampliava"
+          },
+          {
+            "size": "3",
+            "suffix": "iria"
+          },
+          {
+            "size": "3",
+            "suffix": "irmo"
+          },
+          {
+            "size": "3",
+            "suffix": "isse"
+          },
+          {
+            "size": "4",
+            "suffix": "iste"
+          },
+          {
+            "size": "5",
+            "suffix": "izar",
+            "exception": "organizar"
+          },
+          {
+            "size": "5",
+            "suffix": "itar",
+            "exception": [
+              "acreditar",
+              "explicitar",
+              "estreitar"
+            ]
+          },
+          {
+            "size": "2",
+            "suffix": "amo"
+          },
+          {
+            "size": "2",
+            "suffix": "ara",
+            "exception": [
+              "arara",
+              "prepara"
+            ]
+          },
+          {
+            "size": "2",
+            "suffix": "ará",
+            "exception": "alvará"
+          },
+          {
+            "size": "2",
+            "suffix": "are",
+            "exception": "prepare"
+          },
+          {
+            "size": "2",
+            "suffix": "ava",
+            "exception": "agrava"
+          },
+          {
+            "size": "2",
+            "suffix": "emo"
+          },
+          {
+            "size": "5",
+            "suffix": "eou"
+          },
+          {
+            "size": "3",
+            "suffix": "era",
+            "exception": [
+              "acelera",
+              "espera"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "erá"
+          },
+          {
+            "size": "3",
+            "suffix": "ere",
+            "exception": "espere"
+          },
+          {
+            "size": "3",
+            "suffix": "iam",
+            "exception": [
+              "enfiam",
+              "ampliam",
+              "elogiam",
+              "ensaiam"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "íei"
+          },
+          {
+            "size": "3",
+            "suffix": "imo",
+            "exception": [
+              "reprimo",
+              "intimo",
+              "íntimo",
+              "nimo",
+              "queimo",
+              "ximo"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "ira",
+            "exception": [
+              "fronteira",
+              "sátira"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "irá"
+          },
+          {
+            "size": "3",
+            "suffix": "ire",
+            "exception": "adquire"
+          },
+          {
+            "size": "3",
+            "suffix": "ído"
+          },
+          {
+            "size": "3",
+            "suffix": "omo"
+          },
+          {
+            "size": "4",
+            "suffix": "ear",
+            "exception": [
+              "alardear",
+              "nuclear"
+            ]
+          },
+          {
+            "size": "3",
+            "suffix": "uei"
+          },
+          { "replacement": "u", "size": "5", "suffix": "uía" },
+          { "size": "2", "suffix": "ai" },
+          { "size": "2", "suffix": "am" },
+          { "size": "2", "suffix": "ar", "exception": [ "azar", "bazaar", "patamar" ] },
+          { "size": "3", "suffix": "ei" },
+          { "size": "2", "suffix": "em", "exception": [ "alem", "virgem" ] },
+          { "size": "2", "suffix": "er", "exception": [ "éter", "pier" ] },
+          { "size": "3", "suffix": "eu", "exception": "chapeu" },
+          { "size": "3", "suffix": "ia", "exception": [ "estória", "fatia", "acia", "praia", "elogia", "mania", "lábia", "aprecia", "polícia", "arredia", "cheia", "ásia" ] },
+          { "size": "3", "suffix": "ir", "exception": "freir" },
+          { "size": "3", "suffix": "iu" },
+          { "size": "3", "suffix": "ou" },
+          { "size": "3", "suffix": "i" }
+        ]
+      },
+      {
+        "name": "vowelremoval",
+        "size": "0",
+        "exceptions": "0",
+        "rule": [
+          { "size": "3", "suffix": "a", "exception": "ásia" },
+          { "size": "3", "suffix": "á" },
+          { "size": "3", "suffix": "e" },
+          { "size": "3", "suffix": "ê", "exception": "bebê" },
+          { "size": "3", "suffix": "o", "exception": "ão" },
+          { "replacement": "vel", "size": "2", "suffix": "bil" },
+          { "replacement": "g", "size": "3", "suffix": "gue", "exception": [ "gangue", "jegue" ] }
+        ]
+      }
+    ]
+  }
+}
